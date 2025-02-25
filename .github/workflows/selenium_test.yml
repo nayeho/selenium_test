@@ -21,6 +21,15 @@ jobs:
       - name: 필요한 패키지 설치
         run: pip install selenium
 
+      - name: 크롬 브라우저 관련 환경 구성
+        run: |
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo dpkg -i google-chrome-stable_current_amd64.deb
+          sudo apt-get update
+          sudo apt-get upgrade -y
+          sudo apt --fix-broken install
+          google-chrome --version
+          
       - name: 포켓몬 도감 웹 페이지에서 이상해씨 분류 가져오기
         run: python pokemon_script.py
 
