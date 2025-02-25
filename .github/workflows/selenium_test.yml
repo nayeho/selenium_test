@@ -5,7 +5,7 @@ on:
 
 jobs:
   selenium_test:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     
     steps:
       - name: 저장소 체크아웃
