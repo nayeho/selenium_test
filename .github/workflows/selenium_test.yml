@@ -25,9 +25,6 @@ jobs:
         run: |
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
           sudo dpkg -i google-chrome-stable_current_amd64.deb
-          sudo apt-get update
-          sudo apt-get upgrade -y
-          sudo apt --fix-broken install
           google-chrome --version
           
       - name: 포켓몬 도감 웹 페이지에서 이상해씨 분류 가져오기
