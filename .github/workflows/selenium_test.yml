@@ -28,6 +28,9 @@ jobs:
           google-chrome --version
           sudo apt-get install unzip
           wget https://storage.googleapis.com/chrome-for-testing-public/133.0.6943.126/linux64/chromedriver-linux64.zip
+
+      - name: 크롬 드라이버 관련 환경 구성
+        run: |
           upzip chromedriver-linux64.zip
           mv chromedriver-linux64/chromedriver chromedriver
           sudo chmod +x chromedriver
